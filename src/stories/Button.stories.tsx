@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import {Button} from "@mui/material";
 
-
-const meta = {
+const meta:Meta<typeof Button>  = {
   title: 'Form/Control/Button',
   component: Button,
+  argTypes: { onClick: { action: 'clicked' } },
   args:{
     variant:"contained",
     children:"Button Children Global Args"
-  }
-} satisfies Meta<typeof Button>;
+  },
+    }  ;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
